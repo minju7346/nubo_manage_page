@@ -1,0 +1,232 @@
+<!-- 
+  작성자: 차민주
+  작성 일시: 2021-04-05
+  파일명: sk_down.html
+  설명: (예시)sk기업의 앱 다운로드 페이지
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      ul {
+        list-style: none;
+        margin-top: 100px;
+        padding: 0;
+      }
+      .header_3 {
+        margin: 40px 0 30px 60px;
+        color: rgb(94, 94, 94);
+      }
+      .wrap_3 {
+        display: grid;
+        grid-template-columns: 0.8fr 0.2fr 1fr;
+        margin: 0 60px;
+        height: 100%;
+      }
+      .wrap_3 > div:nth-child(2) {
+        margin: 0 auto;
+      }
+      .wrap_3 img {
+        width: 120%;
+        margin: 0 100% 0 0;
+      }
+      .line {
+        border-left: 1px solid gray;
+        height: 100%;
+      }
+      .app {
+        display: grid;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        height: 100%;
+        grid-gap: 3px;
+        margin: 30px 0 0 0;
+        text-align: center;
+      }
+      .os {
+        margin: 40px 0 0 0;
+      }
+      .os div {
+        display: inline-block;
+      }
+      .os ul {
+        margin: 0;
+      }
+      .os img {
+        margin: 0 0 10px 0px;
+      }
+      .os li {
+        margin-top: 30px;
+      }
+      input[type="button"] {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+        margin: 20px 30px 5px 30px;
+      }
+      .btn {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        background: var(--button-bg-color);
+        color: var(--button-color);
+
+        margin: 0;
+        padding: 0.5rem 1rem;
+
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: none;
+
+        border: none;
+        border-radius: 4px;
+
+        display: inline-block;
+        width: auto;
+
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+        cursor: pointer;
+
+        transition: 0.5s;
+        --button-color: #ffffff;
+        --button-bg-color: #ffc107;
+        --button-hover-bg-color: #e0a800;
+      }
+      body {
+        margin: 10px;
+        font-size: 14px;
+      }
+
+      select {
+        width: 200px;
+        padding: 0.8em 0.5em;
+        font-family: inherit;
+        background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
+          no-repeat 95% 50%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 2px solid #999;
+        border-radius: 0px;
+      }
+      select::-ms-expand {
+        /* for IE 11 */
+        display: none;
+      }
+      hr {
+        background-color: #999;
+        height: 2px;
+        border: 0px;
+      }
+      h5 {
+        margin-top: 1px;
+      }
+    </style>
+    <title>SK Nubo downpage</title>
+  </head>
+  <body>
+    <div class="header_3">
+      <img src="/dist/img/sk.png" /><img src="/dist/img/x_nubo.png" />
+      <img src="/dist/img/" + <%="db.corp" % /> + ".png" />
+    </div>
+    <!--상단 기업 로고 구성-->
+    <div class="wrap_3">
+      <!--전체 레이아웃-->
+      <div><img src="/dist/img/nubo_p.png" id="nubo_p" /></div>
+      <!--좌측 구성-->
+      <div class="line"></div>
+      <!--중간 구성(선)-->
+      <div class="app">
+        <!--우측 구성-->
+        <div class="version"><h4></h4></div>
+        <div class="os">
+          <div>
+            <ul>
+              <li><img src="/dist/img/ad_temp.png" style="width: 150px" /></li>
+              <hr style="margin-left: 5px" />
+              <li>
+                <input type="radio" id="type_new" name="os" value="Wi-fi" />
+                <label for="type_new" style="font-size: large">Wi-fi</label>
+                <input type="radio" id="type_new" name="os" value="Prod" />
+                <label for="type_new" style="font-size: large">Prod</label>
+              </li>
+              <li style="padding-bottom: 0">
+                <input
+                  type="button"
+                  value="Download"
+                  style="padding: 0.7em 3em"
+                  class="btn"
+                />
+              </li>
+              <li style="padding-top: 0; margin-top: 0" class="version">
+                <h5 style="padding-top: 0; color: rgb(255, 67, 67)">
+                  version5_wi-fi5_otp
+                </h5>
+              </li>
+              <li>
+                <select name="corp">
+                  <option value="tesla">Wi-fi5_otp_version2.0</option>
+                  <option value="volvo">Wi-fi5_otp_version3.0</option>
+                  <option value="mercedes">Wi-fi5_screenshot_version2.0</option>
+                  <% db.forEach(function(item, index){ %>
+                  <option value="<%= item.corp %>"><%= item.corp %></option>
+                  <% }); %>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <img
+                  src="/dist/img/ios_temp.png"
+                  style="width: 90px; margin-bottom: 10px"
+                />
+              </li>
+              <hr style="margin: 10px 0 7px 15px" />
+              <li>
+                <input type="radio" id="type_new" name="os" value="Wi-fi" />
+                <label for="type_new" style="font-size: large">Wi-fi</label>
+                <input type="radio" id="type_new" name="os" value="Prod" />
+                <label for="type_new" style="font-size: large">Prod</label>
+              </li>
+              <li style="padding-bottom: 0">
+                <input
+                  type="button"
+                  value="Download"
+                  style="padding: 0.7em 3em"
+                  class="btn"
+                />
+              </li>
+              <li style="padding-top: 0; margin-top: 0">
+                <h5 style="padding-top: 0; color: rgb(255, 67, 67)">
+                  version5_wi-fi5_otp
+                </h5>
+              </li>
+              <li>
+                <select>
+                  <option value="tesla">prod_otp_version3.0</option>
+                  <option value="volvo">prod_bio_version2.0</option>
+                  <option value="mercedes">prod_version1.0</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "liveServer.settings.port": 5501,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3300,
+            "driver": "MariaDB",
+            "name": "z",
+            "group": "z",
+            "database": "test",
+            "username": "nodejs",
+            "password": "123456"
+        }
+    ]
+}

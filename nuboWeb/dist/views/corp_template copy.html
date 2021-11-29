@@ -1,0 +1,451 @@
+<!-- 
+  작성자: 차민주
+  작성 일시: 2021-04-05
+  파일명: sk_down.html
+  설명: (예시)sk기업의 앱 다운로드 페이지
+ -->
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      ul {
+        list-style: none;
+        margin-top: 100px;
+        padding: 0;
+      }
+      .header_3 {
+        margin: 40px 0 30px 60px;
+        color: rgb(94, 94, 94);
+      }
+      .header_3 img{
+        width: 150px;
+      }
+      .wrap_3 {
+        display: grid;
+        grid-template-columns: 0.8fr 0.2fr 1fr;
+        margin: 0 60px;
+        height: 100%;
+      }
+      .wrap_3 > div:nth-child(2) {
+        margin: 0 auto;
+      }
+      .wrap_3 img {
+        width: 120%;
+        margin: 0 100% 0 0;
+      }
+      .line {
+        border-left: 1px solid gray;
+        height: 100%;
+      }
+      .app {
+        display: grid;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        height: 100%;
+        grid-gap: 3px;
+        margin: 30px 0 0 0;
+        text-align: center;
+      }
+      .os {
+        margin: 40px 0 0 0;
+      }
+      .os div {
+        display: inline-block;
+      }
+      .os ul {
+        margin: 0;
+      }
+      .os img {
+        margin: 0 0 10px 0px;
+      }
+      .os li {
+        margin-top: 30px;
+      }
+      input[type="button"] {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+        margin: 20px 30px 5px 30px;
+      }
+      .btn {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        background: var(--button-bg-color);
+        color: var(--button-color);
+
+        margin: 0;
+        padding: 0.5rem 1rem;
+
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: none;
+
+        border: none;
+        border-radius: 4px;
+
+        display: inline-block;
+        width: auto;
+
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+        cursor: pointer;
+
+        transition: 0.5s;
+        --button-color: #ffffff;
+        --button-bg-color: rgb(98, 148, 255);
+        --button-hover-bg-color: #5a01ff;
+      }
+      body {
+        margin: 10px;
+        font-size: 14px;
+      }
+      select {
+        width: 200px;
+        padding: 0.8em 0.5em;
+        font-family: inherit;
+        background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
+          no-repeat 95% 50%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 2px solid #999;
+        border-radius: 0px;
+      }
+      select::-ms-expand {
+        /* for IE 11 */
+        display: none;
+      }
+      hr {
+        background-color: #999;
+        height: 2px;
+        border: 0px;
+      }
+      h5 {
+        margin-top: 1px;
+      }
+      .osStyle{
+        margin-right: 50px;
+      }
+      @media all and (min-width: 320px) and (max-width: 760px) {
+        .line {
+          display: none;
+        }
+        .phone {
+          /* display: none; */
+        }
+        
+        .header_3{
+          text-align: center;
+          margin:0;
+          
+        }
+        .header_3 img{
+          margin-top:50px;
+          width : 150px;
+        }
+    
+        div{
+          margin:0;
+        }
+        .osStyle{
+          margin:30px 0px;
+
+        }
+      }
+    </style>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //if("${Type1}" == "cellular + Wifi"){
+        if ("cellular + Wifi" == "cellular + Wifi") {
+          $('input:radio[name="Type1"][value="cellular + Wifi"]').prop("checked", true);
+          $("select[name='wifisMainCategory1']")
+            .val("2")
+            .attr("selected", "selected");
+          $("#viewprodCategory1").hide();
+          $("#viewwifiCategory1").show();
+        }
+
+        //라디오 버튼 변경시 이벤트
+        $("input[name='Type1']:radio").change(function () {
+          var serviceType = this.value;
+          if (serviceType == "cellular + Wifi") {
+            var jb2 = $("select#selectBox1").val();
+            $("#sel_text1").html(jb2);
+            $("#viewprodCategory1").hide();
+            $("#viewwifiCategory1").show();
+          } else if (serviceType == "cellular") {
+            var jb2 = $("select#selectBox2").val();
+            $("#sel_text1").html(jb2);
+            $("#viewprodCategory1").show();
+            $("#viewwifiCategory1").hide();
+          }
+        });
+      });
+      $(document).ready(function () {
+        //if("${Type2}" == "cellular + Wifi"){
+        if ("cellular + Wifi" == "cellular + Wifi") {
+          $('input:radio[name="Type1"][value="cellular + Wifi"]').prop("checked", true);
+          $("select[name='wifisMainCategory2']")
+            .val("2")
+            .attr("selected", "selected");
+          $("#viewprodCategory2").hide();
+          $("#viewwifiCategory2").show();
+        }
+        //라디오 버튼 변경시 이벤트
+        $("input[name='Type2']:radio").change(function () {
+          var serviceType = this.value;
+          $("#sel_text2").html(jb2);
+          if (serviceType == "cellular + Wifi") {
+            var jb2 = $("select#selectBox3").val();
+            $("#sel_text2").html(jb2);
+            $("#viewprodCategory2").hide();
+            $("#viewwifiCategory2").show();
+          } else if (serviceType == "cellular") {
+            var jb2 = $("select#selectBox4").val();
+            $("#sel_text2").html(jb2);
+            $("#viewprodCategory2").show();
+            $("#viewwifiCategory2").hide();
+          }
+        });
+      });
+      $(document).ready(function () {
+        $("button[name='down1']").click(function () {
+          var serviceType = $("input[name='Type1']:checked").val();
+          if (serviceType == "cellular + Wifi") {
+          var k = $("select#selectBox1").val();
+          location.href = "/downloads/"+ k;
+          }
+          else if (seviceType = "cellular"){
+            var k = $("select#selectBox2").val();
+          location.href = "/downloads/"+ k;
+          }
+        });//첫 번째 버튼 클릭 시, 앱 다운로드
+        // $("button[name='down2']").click(function () {
+        //   var serviceType = $("input[name='Type2']:checked").val();
+        //   if (serviceType == "cellular + Wifi") {
+        //   var k = $("select#selectBox3").val();
+        //   location.href = "/downloads/"+ k;
+        //   }
+        //   else if (seviceType = "cellular"){
+        //     var k = $("select#selectBox4").val();
+        //   location.href = "/downloads/"+ k;
+        //   }
+        // });두 번째 버튼 클릭 시, 앱 다운로드
+      });
+    </script>
+    <script> 
+  function download(data, filename, type) {
+    var a ='<?xml version="1.0" encoding="UTF-8"?>';
+    a += '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">';
+    a += '<plist version="1.0">';
+    a += '</plist>';
+    data = a;
+    filename = document.getElementById('a').value + ".plist";
+    var file = new Blob([data], {type: type});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);  
+        }, 0); 
+    }
+}
+    </script>
+    <title><%=dbList[0].corp %> nubo app</title>
+  </head>
+  <body>
+    <div id="result"></div>
+    <form action="upload" method="post" enctype="multipart/form-data">
+      <div class="header_3">
+        <img src="/dist/img/<%=dbList[0].corp %>.png" />
+      </div>
+      <!--상단 기업 로고 구성-->
+      <div class="wrap_3">
+        <!--전체 레이아웃-->
+        <div class="phone"><img src="/dist/img/mobile.png" id="nubo_p" /></div>
+        <!--좌측 구성-->
+        <div class="line"></div>
+        <!--중간 구성(선)-->
+        <div class="app">
+          <!--우측 구성-->
+          <div class="os">
+            <!-- 안드로이드 다운로드 -->
+            <div class="osStyle" >
+              <br /><br />
+              <ul>
+                <li>
+                  <img src="/dist/img/ad_temp.png" style="width: 150px" />
+                </li>
+                <hr style="margin-left: 5px" />
+                <!-- 안드로이드 type 선택 -->
+                <li>
+                  <input type="radio" name="Type1" value="cellular" />
+                  <label for="type_new" style="font-size: large">cellular</label>
+                  <input type="radio" name="Type1" value="cellular + Wifi" checked />
+                  <label for="type_new" style="font-size: large">cellular+Wi-fi</label>
+                </li>
+                <!-- 안드로이드 드롭다운1(cellular + Wifi) -->
+                <li id="viewwifiCategory1">
+                  <select
+                    class="form-control wifiMainCategory1"
+                    name="wifiMainCategory1"
+                    style="width: 200px"
+                    id="selectBox1"
+                  >
+                    <% dbList.forEach(function(item, index){ %> <% if (item.os
+                    == "Android" && item.type == "cellular + Wifi") { %>
+                    <option value="<%= item.userfile %>">
+                      <%= item.version %>_<%= item.types %>
+                    </option>
+                    <% } }); %>
+                  </select>
+                </li>
+                <!-- 안드로이드 드롭다운2(cellular) -->
+                <li id="viewprodCategory1" style="display: none">
+                  <select
+                    class="form-control prodMainCategory1"
+                    name="prodMainCategory1"
+                    style="width: 200px"
+                    id="selectBox2"
+                  >
+                    <% dbList.forEach(function(item, index){ %> <% if (item.os
+                    == "Android" && item.type == "cellular") { %>
+                    <option value="<%= item.userfile %>">
+                      <%= item.version %>_<%= item.types %>
+                    </option>
+
+                    <% } }); %>
+                  </select>
+                </li>
+                <!-- 안드로이드 파일 다운로드 버튼 -->
+                <li style="padding-bottom: 0">
+                  <button
+                    name="down1"
+                    type="button"
+                    value="Download"
+                    style="padding: 1em 5em"
+                    class="btn"
+              />Download</button>
+                </li>
+                <!--안드로이드 선택된 파일명 출력-->
+                <li style="padding-top: 0px; margin-top:10px">
+                  <h5
+                    id="sel_text1"
+                    style="padding-top: 0; color: rgb(40, 0, 185)"
+                  ></h5>
+                </li>
+              </ul>
+            </div>
+            <!--IOS 다운로드 -->
+            <div class="osStyle" >
+              <ul>
+                <li>
+                  <img
+                    src="/dist/img/ios_temp.png"
+                    style="width: 90px; margin-bottom: 10px"
+                  />
+                </li>
+                <hr style="margin: 10px 0 7px 15px" />
+                <!-- IOS type 선택 -->
+                <li>
+                  <input type="radio" name="Type2" value="cellular" />
+                  <label for="type_new" style="font-size: large">cellular</label>
+                  <input type="radio" name="Type2" value="cellular + Wifi" checked />
+                  <label for="type_new" style="font-size: large">cellular+Wi-fi</label>
+                </li>
+                <!--IOS 드롭다운 1-->
+                <li id="viewwifiCategory2">
+                  <select
+                    class="form-control wifiMainCategory2"
+                    name="wifiMainCategory2"
+                    style="width: 200px"
+                    id="selectBox3"
+                  >
+                    <% dbList.forEach(function(item, index){ %> <% if (item.os
+                    == "ios" && item.type == "cellular + Wifi") { %>
+                    <option value="<%= item.userfile %>">
+                      <%= item.version %>_<%= item.types %>
+                    </option>
+                    <% } }); %>
+                  </select>
+                </li>
+                <!-- IOS 드롭다운2(cellular) -->
+                <li id="viewprodCategory2" style="display: none">
+                  <select
+                    class="form-control prodMainCategory2"
+                    name="prodMainCategory2"
+                    style="width: 200px"
+                    id="selectBox4"
+                  >
+                    <% dbList.forEach(function(item, index){ %> <% if (item.os
+                    == "ios" && item.type == "cellular") { %>
+                   <option value="<%= item.userfile %>">
+                      <%= item.version %>_<%= item.types %>
+                    </option>
+                    <% } }); %>
+                  </select>
+                </li>
+                <!-- IOS 파일 다운로드 버튼 -->
+                <li style="padding-bottom: 0">
+                  <button
+                    name="down2"
+                    type="button"
+                    value="Download"
+                    style="padding: 1em 5em"
+                    class="btn"
+                  onclick="download()"/>Download</button>
+                  </li>
+                <!--IOS 선택된 파일명 출력-->
+                <li style="padding-top: 0px; margin-top: 10px">
+                  <h5
+                    id="sel_text2"
+                    style="padding-top: 0; color: rgb(40, 0, 185)"
+                  ></h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script type="text/javascript">
+      var target1 = document.getElementById("selectBox1");
+      $("#sel_text1").html(target1.options[target1.selectedIndex].text); // 옵션 text 값
+      var target2 = document.getElementById("selectBox3");
+      $("#sel_text2").html(target2.options[target2.selectedIndex].text); // 옵션 text 값
+      $(document).ready(function () {
+        $("select#selectBox1").change(function () {
+          var jb1 = $("select#selectBox1").val();
+          $("#sel_text1").html(jb1);
+        });
+        $("select#selectBox2").change(function () {
+          var jb1 = $("select#selectBox2").val();
+          $("#sel_text1").html(jb2);
+        });
+        $("select#selectBox3").change(function () {
+          var jb2 = $("select#selectBox3").val();
+          $("#sel_text2").html(jb2);
+        });
+        $("select#selectBox4").change(function () {
+          var jb2 = $("select#selectBox4").val();
+          $("#sel_text2").html(jb2);
+        });
+      });
+    </script>
+  </body>
+</html>

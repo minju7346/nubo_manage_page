@@ -1,0 +1,20 @@
+[Unit]
+Description = Nubo Apps management page web service
+
+[Service]
+ExecStart=/usr/bin/node /home/nubo/nuboWeb/main.js
+Restart=always
+Group=nogroup
+RestartSec=5s
+KillSignal=SIGINT
+# 환경변수를 Environment=변수이름=변수값 처럼 정의할 수 있다
+WorkingDirectory=/home/nubo/nuboWeb/
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+

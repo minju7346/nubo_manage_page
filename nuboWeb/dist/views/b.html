@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function download(a, filename, type) {
+        var data =
+          '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><key>items</key><array><dict><key>assets</key><array><dict><key>kind</key><string>software-package</string><key>url</key>';
+        data +=
+          "<string>https://vmi.vworkspace.co.kr:4435/html/sks/download/sks.nubog.ios-2.8.69-prod.ipa</string>"; ///수정
+        data +=
+          "</dict></array><key>metadata</key><dict><key>bundle-identifier</key>";
+        data += "<string>sks.nubog.ios</string>"; //수정
+        data += "<key>bundle-version</key>";
+        data +=
+          "<string>2.8.21</string><key>kind</key><string>software</string><key>title</key>";
+        data += "<string>SKS_Groupware</string>"; //수정
+        data += "</dict></dict></array></dict></plist>";
+        a = data;
+        filename = filename + ".plist";
+        var file = new Blob([data], { type: type });
+        if (window.navigator.msSaveOrOpenBlob)
+          // IE10+
+          window.navigator.msSaveOrOpenBlob(file, filename);
+        else {
+          // Others
+          var a = document.createElement("a"),
+            url = URL.createObjectURL(file);
+          a.href = url;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(function () {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+          }, 0);
+        }
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>문자열 파싱</h1>
+    <fieldset>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <lable>기업명</lable>
+            </td>
+            <td>
+              <input type="text" id="a" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <lable>기업 설명</lable>
+            </td>
+            <td>
+              <input type="text" name="b" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="submit" class="bt btn--blue" value="Submit" />
+    </fieldset>
+    <button onclick="download('123',body.a+'t',text)">++++++!</button>
+    <p id="text"></p>
+  </body>
+</html>

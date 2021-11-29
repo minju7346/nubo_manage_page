@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<key>items</key>
+<array>
+<dict>
+<key>assets</key>
+<array>
+<dict>
+<key>kind</key>
+<string>software-package</string>
+<key>url</key>
+<string>https://vmi.vworkspace.co.kr:4435/html/sks/download/sks.nubog.ios-2.8.69-prod.ipa</string>
+</dict>
+</array>
+<key>metadata</key>
+<dict>
+<key>bundle-identifier</key>
+<string>sks.nubog.ios</string>
+<key>bundle-version</key>
+<string>2.8.21</string>
+<key>kind</key>
+<string>software</string>
+<key>title</key>
+<string>SKS_Groupware</string>
+</dict>
+</dict>
+</array>
+</dict>
+</plist>
