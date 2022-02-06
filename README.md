@@ -5,10 +5,12 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-해당 프로젝트는 모바일 가상화 플랫폼인 'NUBO'앱을 관리하기 위한 페이지로, 고객사별로 앱을 효율적으로 관리하기위해 만들어졌습니다.
+해당 프로젝트는 (주)다우데이타에서 인턴기간동안 진행하였으며, 모바일 가상화 플랫폼인 'NUBO'앱 관리페이지입니다.
 
 ![](readme_img/main.png)
 
+## 1. 프로젝트 목적
+# Requirement
 ## 설치 방법
 
 OS X & 리눅스:
