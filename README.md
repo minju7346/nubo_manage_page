@@ -5,27 +5,36 @@
 
 **실행 화면**
 
-< main.html >
+- main.html 
 
-![](readme_img/main.png){: width="60" height="60"}
+<img src="readme_img/main.png" width="60%" height="60%">
 
-< index.html >
+- index.html 
 
-![image](https://user-images.githubusercontent.com/58619427/152696642-2fdfff67-18a7-45fa-a650-9aacf73eef6b.png){: width="60" height="60"}
+<img src="readme_img/index.png" width="60%" height="60%">
 
 
-<index>
+
+
+
+## 목차
   
-- [1. 프로젝트 개요](#1)
+- [ 프로젝트 개요](#1)
   
-- [2. 프로젝트 정보](#2)
+- [ 프로젝트 정보](#2)
   
-- [3. 프로젝트 기능](#3)
+- [ 프로젝트 기능](#3)
   
-- [4. Flow Chart](#4)
+- [ Flow Chart](#4)
   
-- [5. 개발 환경 설정(마이그레이션)](#5)
+- [ 개발 환경 설정(마이그레이션)](#5)
  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -54,6 +63,15 @@
 - 지속적인 사용을 위해 자동화 기능 구현 필요
 - 데스크탑/ 모바일 UI 지원(=미디어쿼리)
 
+
+
+
+
+
+
+
+
+
 <a name="2"></a>
 ## 2. 프로젝트 구조
 
@@ -76,6 +94,16 @@
 서버 : Citrix XenServer, Linux OS
 
 버전관리 : Github, Jira Software
+
+
+
+
+
+
+
+
+
+
 
 <a name="3"></a>
 ## 3. 프로젝트 기능
@@ -139,6 +167,16 @@
 ![image](https://user-images.githubusercontent.com/58619427/152695440-bf0f54a5-0001-4071-bb3e-39278f63f6c0.png)
 -> 데스크톱, 테블릿, 모바일에서의 화면 크기 조정 기능을 지원합니다.
 
+
+
+
+
+
+
+
+
+
+
 <a name="4"></a>
 ## 4. Flow Chart
 
@@ -153,6 +191,16 @@
 **< 사용자 관점 >**
 
 ![image](https://user-images.githubusercontent.com/58619427/152695981-8704cb43-8b5d-4a5c-a4d3-bf9a3324aae2.png)
+
+
+
+
+
+
+
+
+
+
 
 <a name="5"></a>
 ## 5. 개발 환경 설정(마이그레이션)
