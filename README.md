@@ -53,10 +53,15 @@
 
 **< skills >**
 프론트엔드 : Html, CSS, JavaScript
+
 백엔드 : Node.js(+ express, ejs)
+
 데이터베이스 : MariaDB
+
 서버 : Citrix XenServer, Linux OS
+
 버전관리 : Github, Jira Software
+
 
 ## 3. 프로젝트 기능
 
@@ -65,6 +70,7 @@
 ![image](https://user-images.githubusercontent.com/58619427/152695027-79373e23-980f-4446-a820-81f8bccf6f02.png)
 
 -> 필수입력값만 입력 후 파일을 업로드하면 나머지 정보들(OS, type등)은 파일명을 통해 자동쿼리되도록 만들었습니다.
+
 
 **2) Read - App 및 기업 정보**
 
@@ -75,12 +81,14 @@
 
 -> 테이블 좌측 상단의 아이콘들을 통해 파일 업로드 및 휴지통 이동이 가능합니다.
 
+
 **3) Upload - App 및 기업 정보**
 
 ![image](https://user-images.githubusercontent.com/58619427/152695244-d5c834d8-290c-4d54-a99e-b8f4441bc00a.png)
 -> 업로드 된 파일 중, 수정하고 싶은 파일의 정보를 갱신합니다.
 
 -> 파일의 정보 중, 수정가능한 정보값만 갱신할 수 있습니다.
+
 
 **4) Delete - App 및 기업 정보**
 
@@ -94,6 +102,7 @@
 
 --> 파일은 한번 삭제시 휴지통으로 이동하며, 복구 또는 완전삭제 기능을 지원합니다.
 
+
 **5) 고객사 웹페이지 출력**
 
 ![image](https://user-images.githubusercontent.com/58619427/152695525-616ef1d4-4f02-40bb-b457-e41548f735ee.png)
@@ -101,12 +110,14 @@
 
 -> 기업 아이콘 클릭시, 해당 기업의 앱 다운로드 페이지로 이동합니다.
 
+
 **6) 고객사 앱 다운로드 페이지**
 
 ![image](https://user-images.githubusercontent.com/58619427/152695646-abebc6ae-88b6-4abc-bdc8-4b33e1c17130.png)
 -> 해당 기업의 앱 시작 화면이 출력되고, 업로드 한 앱들을 OS별, Type별로 선택한 후 다운로드 할 수 있습니다.
 
 -> 이 페이지가 실제 고객사에 전달되는 다운로드 페이지 입니다.
+
 
 **7) Media Quiry**
 
@@ -165,6 +176,8 @@ $ sudo npm install dialog
 $ vi nuboWeb.service
 ```
 ![image](https://user-images.githubusercontent.com/58619427/152696601-5a68bc90-86ac-4d33-b85a-6be3b768d5c9.png)
+
+---end---
 
 
 
