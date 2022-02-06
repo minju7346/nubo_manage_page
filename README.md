@@ -1,17 +1,15 @@
 # NUBO 앱 관리 페이지
 > 해당 프로젝트는 (주)다우데이타에서 인턴기간동안(2021.01~2021.08, 8개월) 진행하였으며, 'NUBO'앱 관리자용 웹페이지입니다.
 
-<br><br><br><br>
-**실행 화면 예시**
 <br>
+
+**실행 화면 예시**
 
 <img src="readme_img/index.png" width="60%" height="60%">
 
 
 
-
-
-<br/><br/><br/><br/><br/>
+<br/><br/><br/>
 
 ## 목차
   
@@ -28,7 +26,7 @@
   
   
   
-  <br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/>
   
   
   
@@ -40,16 +38,20 @@
 **제작배경**
 - Nubo 웹페이지 보완 필요, 파일 관리 페이지 부재
 <br/>
+
 **제작목적**
 - Nubo 기본 웹페이지 생성 및 사 웹페이지 관리
 - 파일 관리 용이성 증대
 <br/>
+
 **기대효과**
 - Nubo 제품에 대한 기본 웹사이트 보유 및 관리 간편화
 <br/>
+
 **기능요약**
 - 고객사 웹페이지 통합관리 및 앱 파일 관리
 <br/>
+
 **요구사항**
 - Android용 apk 및 iOS용 ipa 파일 다운로드 페이지 구현
 - 앱파일 CRUD기능 구현
@@ -71,8 +73,10 @@
 <a name="2"></a>
 ## 2. 프로젝트 세부사항
 <br/>
+
 **< skills >**
 <br/><br>
+
 **프론트엔드** : Html, CSS, JavaScript
 
 **백엔드** : Node.js(+ express, ejs)
@@ -137,12 +141,13 @@
 1 - 휴지통으로 삭제할 App이나 기업 정보 이동
 
 ![image](https://user-images.githubusercontent.com/58619427/152695324-b9883adc-19d7-4fc5-aced-b9b56a741e2f.png)
-<br>
+<br><br>
+
 2 - 휴지통에 있는 App이나 기업 정보 복구 및 완전 삭제
 
 ![image](https://user-images.githubusercontent.com/58619427/152695338-20b521b8-f988-437f-bd3c-06f44c4374e2.png)
 
---> 파일은 한번 삭제시 휴지통으로 이동하며, 복구 또는 완전삭제 기능을 지원합니다.
+-> 파일은 한번 삭제시 휴지통으로 이동하며, 복구 또는 완전삭제 기능을 지원합니다.
 <br/><br/>
 
 **5) 고객사 웹페이지 출력**
@@ -182,10 +187,12 @@
 **< 초기 구축시 관리자 관점 >**
 
 ![image](https://user-images.githubusercontent.com/58619427/152695895-d32d5b28-a0d8-4f9d-a927-782c4bfc966a.png)
+<br><br>
 
 **< 추후 업데이트시 관리자 관점 >**
 
 ![image](https://user-images.githubusercontent.com/58619427/152695943-cbec2acb-f7bb-4354-a50c-7d09c68aa539.png)
+<br><br>
 
 **< 사용자 관점 >**
 
@@ -211,7 +218,7 @@
 $sudo vi /etc/network/interfaces
 ``` 
 <img src="readme_img/server.png" width="40%" height="40%">
-<br/>
+<br/><br>
 
 2. mysql에 접속 후 초기세팅 sql파일 import 및 사용자 권한 부여
 ```sh
@@ -222,10 +229,12 @@ $ mysql –uroot –ppassword
 > create user 'web’@’해당 서버 IP' identified by '123456';
 > grant all privileges on 데이터베이스명.* to 'web'@'%';
 ``` 
-<br/>
+<br/><br>
+
 3. 해당 소스파일 업로드 
 : winSCP를 이용하여 웹서버에 전송
-<br/>
+<br/><br>
+
 4. 사용할 모듈 설치
 ```sh
 $ sudo npm install express
@@ -233,14 +242,15 @@ $ sudo npm install mysql
 $ sudo npm install multer
 $ sudo npm install dialog  
 ``` 
-<br/>
+<br/><br>
+
 5. 웹 서비스 파일 생성 
 ```sh
 $ vi nuboWeb.service
 ```
 <img src="readme_img/service.png" width="50%" height="50%"><br/><br/>
-
----end---
+<br><br><br>
+end.
 
 
 <br/>
