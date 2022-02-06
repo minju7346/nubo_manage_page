@@ -6,14 +6,49 @@
 [![Downloads Stats][npm-downloads]][npm-url]
 
 해당 프로젝트는 (주)다우데이타에서 인턴기간동안 진행하였으며, 모바일 가상화 플랫폼인 'NUBO'앱 관리페이지입니다.
+(2021.01~2021.08, 8개월)
 
 ![](readme_img/main.png)
+< main.html >
+## 1. 프로젝트 개요
 
-## 1. 프로젝트 목적
-# Requirement
-## 설치 방법
+**제작배경 **
+- Nubo 웹페이지 보완 필요, 파일 관리 페이지 부재
 
-OS X & 리눅스:
+**제작목적 **
+- Nubo 기본 웹페이지 생성 및 파트너사 웹페이지 관리
+- 파일 관리 용이성 증대
+
+**기대효과 **
+- Nubo 제품에 대한 기본 웹사이트 보유 및 관리 간편화
+
+**기능요약 **
+- 파트너사 웹페이지 통합관리 및 앱 파일 관리
+
+**요구사항**
+- Android용 apk 및 iOS용 ipa 파일 다운로드 페이지 구현
+- 앱파일 CRUD기능 구현
+- 다양한 버전 관리(Prod, Wifi 등)
+- 버전 앱 파일 관리
+- 파트너사 별 사이트 관리
+- 지속적인 사용을 위해 자동화 기능 구현 필요
+- 데스크탑/ 모바일 UI 지원(=미디어쿼리)
+
+## 2. 프로젝트 구조
+
+**전체 구조**
+![image](https://user-images.githubusercontent.com/58619427/152694813-53afb105-fd1f-4837-b378-1040453c304f.png)
+
+**DB**
+![image](https://user-images.githubusercontent.com/58619427/152694802-6a579627-0d90-433e-9a1f-441293e251cd.png)
+
+**디렉토리 구조**
+![image](https://user-images.githubusercontent.com/58619427/152694906-32a5b96a-17cb-49b9-8cae-932d990c8e9e.png)
+
+**skills**
+![image](https://user-images.githubusercontent.com/58619427/152694885-3896de6a-87a4-4dae-aba8-8c9d7d16bcfc.png)
+
+
 
 ```sh
 npm install my-crazy-module --save
@@ -25,7 +60,12 @@ npm install my-crazy-module --save
 edit autoexec.bat
 ```
 
-## 사용 예제
+## 3. 프로젝트 기능
+
+**1)Crete - App 및 기업 정보**
+
+![image](https://user-images.githubusercontent.com/58619427/152695027-79373e23-980f-4446-a820-81f8bccf6f02.png)
+
 
 스크린 샷과 코드 예제를 통해 사용 방법을 자세히 설명합니다.
 
@@ -55,21 +95,6 @@ npm test
 * 0.0.1
     * 작업 진행 중
 
-## 정보
-
-이름 – [@트위터 주소](https://twitter.com/dbader_org) – 이메일주소@example.com
-
-XYZ 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할 수 있습니다.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## 기여 방법
-
-1. (<https://github.com/yourname/yourproject/fork>)을 포크합니다.
-2. (`git checkout -b feature/fooBar`) 명령어로 새 브랜치를 만드세요.
-3. (`git commit -am 'Add some fooBar'`) 명령어로 커밋하세요.
-4. (`git push origin feature/fooBar`) 명령어로 브랜치에 푸시하세요. 
-5. 풀리퀘스트를 보내주세요.
 
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
