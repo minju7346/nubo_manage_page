@@ -1,5 +1,5 @@
 # NUBO 앱 관리 페이지
-> 해당 프로젝트는 (주)다우데이타에서 인턴기간동안(2021.01~2021.08, 8개월) 진행하였으며, 모바일 가상화 플랫폼인 'NUBO'앱 관리페이지입니다.
+> 해당 프로젝트는 (주)다우데이타에서 인턴기간동안(2021.01~2021.08, 8개월) 진행하였으며, 'NUBO'앱 관리자용 웹페이지입니다.
 
 [![NPM Version][npm-image]][npm-url]
 
@@ -7,11 +7,11 @@
 
 < main.html >
 
-![](readme_img/main.png)
+![](readme_img/main.png){: width="60" height="60"}
 
 < index.html >
 
-![image](https://user-images.githubusercontent.com/58619427/152696642-2fdfff67-18a7-45fa-a650-9aacf73eef6b.png)
+![image](https://user-images.githubusercontent.com/58619427/152696642-2fdfff67-18a7-45fa-a650-9aacf73eef6b.png){: width="60" height="60"}
 
 
 <index>
