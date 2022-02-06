@@ -1,12 +1,11 @@
 # NUBO 앱 관리 페이지
 > 해당 프로젝트는 (주)다우데이타에서 인턴기간동안(2021.01~2021.08, 8개월) 진행하였으며, 'NUBO'앱 관리자용 웹페이지입니다.
 
-[![NPM Version][npm-image]][npm-url]
 <br><br><br><br>
 **실행 화면 예시**
 <br>
 
-<img src="readme_img/index.png" width="50%" height="50%">
+<img src="readme_img/index.png" width="60%" height="60%">
 
 
 
