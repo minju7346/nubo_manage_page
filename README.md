@@ -77,7 +77,7 @@
 **< skills >**
 <br/><br>
 
-**프론트엔드** : Html, CSS, JavaScript
+**프론트엔드** : Html, CSS, JavaScript, Jquery
 
 **백엔드** : Node.js(+ express, ejs)
 
